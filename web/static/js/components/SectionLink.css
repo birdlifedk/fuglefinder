@@ -1,0 +1,44 @@
+@import '../lib/variables';
+@import '../lib/mixins';
+
+.SectionLink {
+  display: block;
+  margin-bottom: 5px;
+  height: 36px;
+  border-radius: 2px;
+  font-size: 19px;
+  font-family: $fontFamilySemibold;
+  display: flex;
+  align-items: center;
+  padding-left: $spaceXs;
+  position: relative;
+  overflow: hidden;
+  background: $drMuddy;
+  color: $drBlue;
+  text-transform: uppercase;
+
+  @media ( min-device-width: 375px ) {
+    height: 46px;
+    padding-left: 16px;
+    > span { position: relative; top: -.05em; }
+  }
+
+  @media ( min-device-width: 414px ) { height: $headerHeight; }
+
+}
+
+span.SectionLink-arrow {
+  display: block;
+  width: 36px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > svg path { fill: $drBlue; }
+
+  @media ( min-device-width: 375px ) { width: 46px; }
+  @media ( min-device-width: 414px ) { width: $headerHeight; }
+}

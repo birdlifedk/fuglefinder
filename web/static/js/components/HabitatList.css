@@ -1,0 +1,17 @@
+@import '../lib/variables';
+@import '../lib/mixins';
+
+.HabitatList {
+  padding: $spaceXs;
+  .SectionLink:last-child { margin-bottom: $spaceXs; }
+}
+
+.HabitatList-guide {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+  height: 44px;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: $drMuddyDark;
+}

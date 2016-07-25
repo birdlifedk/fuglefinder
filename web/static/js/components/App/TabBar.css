@@ -1,0 +1,52 @@
+@import '../../lib/variables';
+@import '../../lib/mixins';
+
+.TabBar {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.TabBarContent {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: flex;
+
+  & > div {
+    width: 100%;
+  }
+}
+
+.TabBarNavigation {
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  height: $headerHeight;
+
+  background: $drMuddyDark;
+}
+
+.TabBarButton {
+  @include blockyText;
+  font-family: $fontFamilySemibold;
+  flex: 1 1 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: $drMuddyDarkest;
+}
+
+
+/* Center line */
+.TabBarButton {
+  box-shadow: inset -1px 0 0 $drMuddyDarker, inset 1px 0 0 $drMuddyDarker;
+}
+.TabBarButton:first-child  { box-shadow: inset -1px 0 0 $drMuddyDarker; }
+.TabBarButton:last-child { box-shadow: inset 1px 0 0 $drMuddyDarker; }
+
+.TabBarButton svg path { fill: $drMuddyDarkest; }
+
+/* Active states */
+.TabBarButton.active { color: #fff; }
+.TabBarButton.active svg path { fill: #fff; }

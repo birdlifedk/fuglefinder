@@ -1,0 +1,49 @@
+@import '../../lib/variables';
+@import '../../lib/mixins';
+
+.Rating {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .18);
+  padding: 0 $spaceXs;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rating-title {
+  color: $marineDark;
+  font-size: 14px;
+  margin-right: .45em;
+}
+
+.Rating svg {
+  margin: 0 .045em;
+}
+
+.Rating--1 .Rating-stars {
+  svg:nth-child(1) polygon { fill: $drBlue; }
+}
+
+.Rating--2 .Rating-stars {
+  svg:nth-child(1) polygon,
+  svg:nth-child(2) polygon { fill: $drBlue; }
+}
+
+.Rating--3 .Rating-stars {
+  svg:nth-child(1) polygon,
+  svg:nth-child(2) polygon,
+  svg:nth-child(3) polygon { fill: $drBlue; }
+}
+
+.Rating--4 .Rating-stars {
+  svg:nth-child(1) polygon,
+  svg:nth-child(2) polygon,
+  svg:nth-child(3) polygon,
+  svg:nth-child(4) polygon { fill: $drBlue; }
+}
+
+.Rating--5 .Rating-stars {
+  svg polygon { fill: $drBlue; }
+}
